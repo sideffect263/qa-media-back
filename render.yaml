@@ -1,0 +1,19 @@
+services:
+
+  - type: web
+    runtime: node
+  
+    name: video-qa-backend
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3001
+      - key: NODE_ENV
+        value: production
+      - key: PYTHON_VERSION
+        value: 3.10.0
+    disk:
+      name: uploads
+      mountPath: /uploads
+      sizeGB: 10

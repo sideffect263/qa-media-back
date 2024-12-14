@@ -1,0 +1,4 @@
+whisper-openai>=20231117
+torch>=2.0.0
+transformers>=4.37.0
+numpy>=1.24.0
